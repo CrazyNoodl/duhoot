@@ -1,0 +1,90 @@
+.search {
+  padding: 10px 0;
+  background: white;
+  border-bottom: 1px solid #e2dee0;
+
+  &__links {
+    text-transform: uppercase;
+
+    @include tablet {
+      @media (max-width: #{$tablet-max-width}) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    margin-right: 15px;
+    color: $grey-color;
+
+    &:hover {
+      color: $red-color;
+      transition: color .3s;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__selects {
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+
+    @include tablet {
+      @media (max-width: #{$tablet-max-width}) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__select {
+    border: 1px solid $grey-color;
+    border-radius: 50px;
+    padding: 8px 20px;
+    width: 120px;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 12px;
+    text-decoration: none;
+
+    &_first {
+      color: $red-color;
+    }
+
+    &_second {
+      color: white;
+      background-color: $green-color;
+      border: none;
+    }
+  }
+
+  &__filter &__home {
+    background: $green-color;
+
+    &:hover {
+      background: darken($green-color, 5);
+      transition: .3s;
+    }
+  }
+
+  &__filter &__music {
+    background: $orange-color;
+
+    &:hover {
+      background: darken($orange-color, 5);
+      transition: .3s;
+    }
+  }
+
+  &__filter &__bus {
+    background: $purple-color;
+
+    &:hover {
+      background: darken($purple-color, 5);
+      transition: .3s;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.container {
+  max-width: 1030px;
+  padding: 0 25px;
+  margin: 0 auto;
+
+  &-intro {
+    padding: 0 10px;
+    max-width: 490px;
+    position: relative;
+    z-index: 3;
+  }
+
+  &-search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include tablet {
+      @media (max-width: #{$tablet-max-width}) {
+        flex-direction: column;
+      }
+    }
+  }
+
+  @include mobileS {
+    @media (max-width: #{$tablet-max-width}) {
+      padding: 0 10px;
+    }
+  }
+}

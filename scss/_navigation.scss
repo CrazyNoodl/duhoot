@@ -1,0 +1,29 @@
+.nav {
+  flex-grow: 1;
+  @include tablet {
+    @media (max-width: #{$tablet-max-width}) {
+      display: none;
+    }
+  }
+
+
+  &__list {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__item {
+    margin-right: 20px;
+    text-transform: uppercase;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $grey-color;
+
+    &:hover {
+      color: $red-color;
+      transition: color .3s;
+    }
+  }
+}

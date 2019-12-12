@@ -1,0 +1,30 @@
+.icon {
+  font-size: 24px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: $green-color;
+  line-height: 55px;
+  color: white;
+  text-align: center;
+  transition: background-color .3s ease-out;
+
+  &--small {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    line-height: 40px;
+  }
+
+  &--orange {
+    background-color: $orange-color;
+  }
+
+  &--grey {
+    background-color: $grey-color;
+  }
+
+  &--purple {
+    background-color: $purple-color;
+  }
+}

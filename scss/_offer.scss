@@ -1,0 +1,148 @@
+.offer {
+  padding: 85px 145px;
+
+  @include tablet {
+    @media (max-width: #{$tablet-max-width}) {
+      padding: 50px 45px;
+    }
+  }
+
+  @include mobileL {
+    @media (max-width: #{$tablet-max-width}) {
+      padding: 15px;
+    }
+  }
+
+  &__container {
+    max-width: 760px;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 22px;
+  }
+
+  &__subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 60px;
+    color: $grey-color;
+
+    @include mobileL {
+      @media (max-width: #{$tablet-max-width}) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    font-size: 40px;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    color: #9dacad;
+    border-radius: 50%;
+    border: 2px solid #9dacad;
+    position: relative;
+
+    &:after {
+      content: "";
+      display: block;
+      width: 42px;
+      height: 2px;
+      background-color: #e2dee0;
+      position: absolute;
+      top: 50px;
+      left: 103px;
+
+      @include tablet {
+        @media (max-width: #{$tablet-max-width}) {
+          content: none;
+        }
+      }
+    }
+
+    &:last-child:after {
+      content: none;
+    }
+
+    &:hover {
+      color: $green-color;
+      border-color: $green-color;
+    }
+
+    @include mobileL {
+      @media (max-width: #{$tablet-max-width}) {
+        width: 50px;
+        height: 50px;
+        font-size: 22px;
+        line-height: 50px;
+      }
+    }
+  }
+
+  &__bottom {
+
+    &_title {
+      padding: 30px 0;
+      font-size: 24px;
+      color: $green-color;
+    }
+
+    &_img {
+      display: block;
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      background-color: $green-color;
+      position: absolute;
+      color: white;
+      font-size: 28px;
+      font-weight: 400;
+      top: 0;
+      left: 0;
+      border-radius: 50%;
+    }
+
+    &_texts {
+      text-align: start;
+      display: flex;
+      justify-content: space-between;
+
+      @include tablet {
+        @media (max-width: #{$tablet-max-width}) {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__text {
+    position: relative;
+    font-weight: 400;
+    padding-left: 80px;
+
+    &:nth-child(2n+1) {
+      margin-right: 34px;
+
+      @include tablet {
+        @media (max-width: #{$tablet-max-width}) {
+          margin-right: 0;
+        }
+      }
+    }
+    @include tablet {
+      @media (max-width: #{$tablet-max-width}) {
+        margin-bottom: 25px;
+      }
+    }
+    
+  }
+
+}

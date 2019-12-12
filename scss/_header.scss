@@ -1,0 +1,66 @@
+.header {
+  background: linear-gradient(-270deg, white 50%, #e94e38 10%) no-repeat;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(-270deg, white 90%, #e94e38 10%) no-repeat
+  }
+
+  &__logo {
+    padding: 14px 0;
+
+    @include tablet {
+      @media (max-width: #{$tablet-max-width}) {
+        flex-grow: 1;
+      }
+    }
+  }
+
+  &__search {
+    font-size: 24px;
+    height: 74px;
+    width: 74px;
+    color: white;
+    line-height: 74px;
+    text-align: center;
+    background-color: $search-color;
+    cursor: pointer;
+
+    &:hover {
+      background: darken($search-color, 5);
+      transition: background-color .3s;
+    }
+
+    @include mobileS {
+      @media (max-width: #{$tablet-max-width}) {
+        display: none;
+      }
+    }
+  }
+
+  &__login {
+    position: relative;
+    padding: 25px 50px 26px 40px;
+    background: $red-color;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    white-space: nowrap;
+
+    &>.fas {
+      margin-right: 10px;
+    }
+
+    &:hover {
+      background: darken($red-color, 10);
+      transition: background-color .3s;
+    }
+
+    @include mobileS {
+      @media (max-width: #{$tablet-max-width}) {
+        padding: 25px 36px 26px 40px;
+      }
+    }
+  }
+}

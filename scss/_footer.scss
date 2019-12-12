@@ -1,0 +1,121 @@
+.footer {
+  padding: 60px 0;
+  background: #043137 url(../intro-bg.png) center no-repeat / cover;
+  text-align: center;
+  position: relative;
+  color: #fff;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .7);
+    z-index: 1;
+  }
+
+  &__header {
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+    margin-bottom: 45px;
+  }
+
+  &__container {
+    position: relative;
+    z-index: 3;
+  }
+
+  &__title {
+    font-size: 24px;
+    margin-bottom: 45px;
+  }
+
+  &__form {
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 55px;
+    max-width: 495px;
+
+  }
+
+  &__icon {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    font-size: 21px;
+  }
+
+  &__input {
+    font-family: inherit;
+    background: rgba(255, 255, 255, 0.1);
+    width: 100%;
+    height: 60px;
+    border-radius: 50px;
+    padding-left: 70px;
+    color: inherit;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    &::placeholder {
+      color: inherit;
+      font-size: 18px;
+    }
+  }
+
+  &__search {
+    position: absolute;
+    top: 3px;
+    right: 4px;
+    padding: 18px 20px;
+    background-color: $red-color;
+    font-size: 14px;
+    border-radius: 50px;
+    border: none;
+    border-bottom: 2px solid #c1412e;
+    font-family: inherit;
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  &__bottom {
+    text-align: start;
+    display: flex;
+
+    &_title {
+      font-size: 16px;
+      text-decoration: underline;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__block {
+    width: 33%;
+  }
+
+  &__link {
+    font-weight: 400;
+    color: #c0bebc;
+    text-decoration: none;
+
+    &:hover {
+      color: white;
+    }
+
+    &>i {
+      color: white;
+    }
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__social {
+    flex-grow: 1;
+    font-size: 30px;
+
+  }
+
+}

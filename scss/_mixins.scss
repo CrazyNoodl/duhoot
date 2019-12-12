@@ -1,0 +1,33 @@
+/* Mixins */
+@mixin main-font {
+  font-family: 'Gotham', sans-serif;
+}
+
+@mixin href {
+  text-decoration: none;
+  color: inherit;
+}
+
+@mixin tablet {
+  @media (max-width: #{$tablet-max-width}) {
+    @content;
+  }
+}
+
+// @mixin mobile {
+//   @media (max-width: #{$mobile-max-width}) {
+//     @content;
+//   }
+// }
+
+@mixin mobileL {
+  @media (max-width: #{$mobileL-max-width}) {
+    @content;
+  }
+}
+
+@mixin mobileS {
+  @media (max-width: #{$mobileS-max-width}) {
+    @content;
+  }
+}

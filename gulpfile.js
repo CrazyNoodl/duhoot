@@ -1,12 +1,10 @@
-let gulp = require('gulp'); //сам gulp
-let rename = require('gulp-rename'); // добавляет переменовку и минификацию
-let sass = require('gulp-sass') //комрилятов из sass в css
-let autoprefixer = require('gulp-autoprefixer') //добавляет автопрефиксер
-let sourcemaps = require('gulp-sourcemaps') //добавляет sourcemap для нормального отображения стилей в DevTools
-var browserSync = require('browser-sync').create(); // удаленный сервер
+const gulp = require('gulp');
+const rename = require('gulp-rename');
+const sass = require('gulp-sass');
+const sourcemaps = require('gulp-sourcemaps');
+const browserSync = require('browser-sync').create();
 
-
-function css_style(done) {
+function cssStyle(done) {
   gulp.src('./scss/**/*')
     .pipe(sourcemaps.init())
     .pipe(sass({
@@ -14,35 +12,30 @@ function css_style(done) {
       outputStyle: 'compressed',
     }))
     .on('error', console.error.bind(console))
-    .pipe(autoprefixer({
-      cascade: false
-    }))
     .pipe(rename({ suffix: '.min' }))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./css/'))
-    .pipe(browserSync.stream()) // hot reload 
+    .pipe(browserSync.stream());
+  done();
+}
 
+function browserReload(done) {
+  browserSync.reload();
   done();
 }
 
 function watch() {
-  gulp.watch('./scss/**/*', css_style); // слежение за файлами и обновление файлов
-  gulp.watch('./**/*.html', browserReload); // слежение за файлами и обновление файлов
+  gulp.watch('./scss/**/*', cssStyle);
+  gulp.watch('./**/*.html', browserReload);
 }
 
 function sync() {
   browserSync.init({
     server: {
-      baseDir: "./"
-    }
+      baseDir: './',
+    },
   });
 }
 
-function browserReload(done) {
-  browserSync.reload();
-
-  done();
-}
-
-gulp.task('default', gulp.parallel(watch, sync))
+gulp.task('default', gulp.parallel(watch, sync));
 gulp.task(sync);

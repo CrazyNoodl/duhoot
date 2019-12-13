@@ -1,5 +1,5 @@
 .intro {
-  background: #043137 url(../intro-bg.png) center no-repeat / cover;
+  background: #043137 url(../img/bg.png) center no-repeat / cover;
   padding: 60px 0 40px;
   min-height: 380px;
   text-align: center;
@@ -17,13 +17,11 @@
     font-size: 18px;
     line-height: 50px;
     font-weight: 400;
-
     text-align: start;
   }
 
   &__select {
     padding-left: 30px;
-    ;
     width: 220px;
     margin-bottom: 22px;
     height: 50px;

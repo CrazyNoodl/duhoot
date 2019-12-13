@@ -137,12 +137,11 @@
         }
       }
     }
+
     @include tablet {
       @media (max-width: #{$tablet-max-width}) {
         margin-bottom: 25px;
       }
     }
-    
   }
-
 }

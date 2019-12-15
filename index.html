@@ -13,11 +13,17 @@
 <body>
   <header class="section header">
     <div class="container header__container">
-      <a class="header__logo" href="#">
+      <div class="header__logo" href="#">
         <img src="./logo.png" alt="logo">
-      </a>
+      </div>
+      <div class="header__wrapper__burger">
+        <div class="header__burger">
+          <span></span>
+        </div>
+      </div>
+
       <nav class="header__nav nav">
-        <ul class="nav__list">
+        <ul class="header__list nav__list">
           <li class="nav__item">
             <a class="nav__link" href="#">
               Reality
@@ -59,8 +65,30 @@
       <h1 class="intro__title">What are you looking for?</h1>
       <form class="intro__form" action="POST">
         <div class="intro__selects">
-          <div class="intro__select">Dubai</div>
-          <div class="intro__select">Education</div>
+          <div class="intro__select select">
+            <div class="select__header">
+              <span class="select__current">Dubai</span>
+              <div class="select__icon"><i class="fas fa-arrow-circle-down"></i></div>
+            </div>
+
+            <div class="select__body">
+              <div class="select__item">Dubai</div>
+              <div class="select__item">Los Angeles</div>
+              <div class="select__item">New York</div>
+            </div>
+          </div>
+          <div class="intro__select select">
+            <div class="select__header">
+              <span class="select__current">Education</span>
+              <div class="select__icon"><i class="fas fa-arrow-circle-down"></i></div>
+            </div>
+
+            <div class="select__body">
+              <div class="select__item">Work</div>
+              <div class="select__item">Rest</div>
+              <div class="select__item">Holiday</div>
+            </div>
+          </div>
         </div>
         <input class="intro__input" type="text" placeholder="Keyword, name, date">
         <button class="intro__search" type="submit">Search</button>
@@ -77,10 +105,19 @@
       </div>
 
       <div class="search__selects">
-        <div class="search__select search__select_first">
-          Dubai
+        <div class="search__select select search__select_first">
+          <div class="select__header select__header--search">
+            <span class="select__current select__current--search">Dubai</span>
+            <div class="select__icon select__icon--search"><i class="fas fa-arrow-circle-down"></i></div>
+          </div>
+
+          <div class="select__body select__body--search">
+            <div class="select__item select__item--search">Dubai</div>
+            <div class="select__item select__item--search">Los Angeles</div>
+            <div class="select__item select__item--search">New York</div>
+          </div>
         </div>
-        <a class="search__select search__select_second" href="#">Hide Map</a>
+        <!-- <a class="search__select search__select_second" href="#">Hide Map</a> -->
       </div>
 
       <div class="search__filter filter">
@@ -813,6 +850,8 @@
       </div>
     </div>
   </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="main.js"></script>
 </body>
 
 </html>

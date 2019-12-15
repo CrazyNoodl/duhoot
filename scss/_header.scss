@@ -4,25 +4,125 @@
   &__container {
     display: flex;
     align-items: center;
-    background: linear-gradient(-270deg, white 90%, #e94e38 10%) no-repeat
+    background: linear-gradient(-270deg, white 90%, #e94e38 10%) no-repeat;
+    height: 75px;
   }
 
   &__logo {
-    padding: 14px 0;
+    flex: 0 0 155px;
+
+    & img {
+      max-width: 100%;
+    }
 
     @include tablet {
       @media (max-width: #{$tablet-max-width}) {
-        flex-grow: 1;
+        flex: 1;
+      }
+    }
+  }
+
+  &__wrapper__burger {
+    position: relative;
+    width: 75px;
+    height: 100%;
+    border-right: 1px solid white;
+  }
+
+  &__burger {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &.active span {
+      transform: scale(0);
+    }
+
+    &.active::before {
+      transform: rotate(45deg);
+      top: 9px;
+    }
+
+    &.active::after {
+      transform: rotate(-45deg);
+      bottom: 9px;
+    }
+
+    @include tablet {
+      @media (max-width: #{$tablet-max-width}) {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+
+        &:before,
+        &:after,
+        & span {
+          content: '';
+          position: absolute;
+          height: 2px;
+          width: 100%;
+          left: 0;
+          background-color: $red-color;
+          transition: all .3s ease 0s;
+        }
+
+        & span {
+          top: 9px;
+        }
+
+        &:before {
+          top: 0;
+        }
+
+        &:after {
+          bottom: 0;
+        }
+      }
+    }
+  }
+
+  &__nav {
+
+    @include tablet {
+      @media (max-width: #{$tablet-max-width}) {
+        padding: 15px;
+        position: absolute;
+        top: 75px;
+        z-index: 5;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        transition: all .3s ease 0s;
+        display: none;
+      }
+    }
+
+    &.active {
+      top: 75px;
+      display: block;
+    }
+  }
+
+  &__list {
+
+    @include tablet {
+      @media (max-width: #{$tablet-max-width}) {
+        display: block;
+        font-size: 24px;
       }
     }
   }
 
   &__search {
+    flex: 0 0 75px;
     font-size: 24px;
-    height: 74px;
-    width: 74px;
     color: white;
-    line-height: 74px;
+    height: 100%;
+    line-height: 75px;
     text-align: center;
     background-color: $search-color;
     cursor: pointer;
@@ -41,7 +141,10 @@
 
   &__login {
     position: relative;
-    padding: 25px 50px 26px 40px;
+    display: block;
+    height: 100%;
+    line-height: 75px;
+    padding: 0 40px;
     background: $red-color;
     text-transform: uppercase;
     text-decoration: none;
@@ -55,12 +158,6 @@
     &:hover {
       background: darken($red-color, 10);
       transition: background-color .3s;
-    }
-
-    @include mobileS {
-      @media (max-width: #{$tablet-max-width}) {
-        padding: 25px 36px 26px 40px;
-      }
     }
   }
 }

@@ -14,6 +14,7 @@
   }
 
   &__container {
+    padding: 0;
     max-width: 760px;
     text-align: center;
   }
@@ -48,12 +49,13 @@
     color: #9dacad;
     border-radius: 50%;
     border: 2px solid #9dacad;
+    background-color: $background-color;
     position: relative;
 
     &:after {
       content: "";
       display: block;
-      width: 42px;
+      width: 55px;
       height: 2px;
       background-color: #e2dee0;
       position: absolute;
@@ -78,10 +80,19 @@
 
     @include mobileL {
       @media (max-width: #{$tablet-max-width}) {
-        width: 50px;
-        height: 50px;
+        width: 70px;
+        height: 70px;
+        font-size: 30px;
+        line-height: 70px;
+      }
+    }
+
+    @include mobileL {
+      @media (max-width: #{$tablet-max-width}) {
+        width: 60px;
+        height: 60px;
         font-size: 22px;
-        line-height: 50px;
+        line-height: 60px;
       }
     }
   }
@@ -95,53 +106,56 @@
     }
 
     &_img {
+      float: left;
       display: block;
       width: 60px;
       height: 60px;
       line-height: 60px;
       text-align: center;
       background-color: $green-color;
-      position: absolute;
       color: $light-color;
       font-size: 28px;
       font-weight: 400;
-      top: 0;
-      left: 0;
       border-radius: 50%;
     }
 
     &_texts {
-      text-align: start;
       display: flex;
       justify-content: space-between;
 
-      @include tablet {
+      & p {
+        padding-left: 95px;
+        text-align: start;
+      }
+
+      @include mobileL {
         @media (max-width: #{$tablet-max-width}) {
-          display: block;
+          flex-direction: column;
         }
       }
     }
   }
 
   &__text {
+    max-width: 360px;
     position: relative;
     font-weight: 400;
-    padding-left: 80px;
-
-    &:nth-child(2n+1) {
-      margin-right: 34px;
-
-      @include tablet {
-        @media (max-width: #{$tablet-max-width}) {
-          margin-right: 0;
-        }
-      }
-    }
 
     @include tablet {
       @media (max-width: #{$tablet-max-width}) {
         margin-bottom: 25px;
       }
+    }
+
+    @include mobileL {
+      @media (max-width: #{$tablet-max-width}) {
+        margin-right: 0;
+        max-width: 560px;
+      }
+    }
+
+    &:nth-child(2n+1) {
+      margin-right: 35px;
     }
   }
 }

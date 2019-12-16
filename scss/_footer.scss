@@ -1,6 +1,7 @@
 .footer {
   padding: 60px 0;
-  background: #043137 url(../img/bg.png) center no-repeat / cover;
+  background: #043137 url(../img/bg.png) center no-repeat;
+  background-size: cover;
   text-align: center;
   position: relative;
   color: $light-color;
@@ -74,7 +75,7 @@
 
   &__link {
     font-weight: 400;
-    color: #c0bebc;
+    color: transparentize($light-color, .2);
     text-decoration: none;
 
     &:hover {

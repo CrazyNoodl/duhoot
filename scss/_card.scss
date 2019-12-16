@@ -99,6 +99,17 @@
     left: 0;
     padding: 25px 35px;
 
+    @include mobileL {
+      @media (max-width: #{$tablet-max-width}) {
+        padding: 20px;
+      }
+    }
+
+    @include mobileS {
+      @media (max-width: #{$tablet-max-width}) {
+        padding: 25px 35px;
+      }
+    }
   }
 
   &__rating {
@@ -297,6 +308,7 @@
       &>span {
         font-weight: 500;
         text-decoration: underline;
+        cursor: pointer;
       }
     }
   }

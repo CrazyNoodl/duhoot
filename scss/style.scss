@@ -1,7 +1,6 @@
-@import "./reser";
-@import "./variables";
-@import "./mixins";
-@import "./select";
+@import "reser";
+@import "variables";
+@import "mixins";
 
 * {
   box-sizing: border-box;
@@ -20,7 +19,10 @@ body {
   font-weight: 400;
 }
 
-@import "section";
+@import "select";
+@import 'button';
+@import 'input';
+@import "card";
 @import "container";
 @import "icon";
 @import "navigation";
@@ -29,6 +31,5 @@ body {
 @import "search";
 @import "filter";
 @import "entertainment";
-@import "card";
 @import "offer";
 @import "footer";

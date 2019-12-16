@@ -1,10 +1,10 @@
 .header {
-  background: linear-gradient(-270deg, white 50%, #e94e38 10%) no-repeat;
+  background: linear-gradient(-270deg, $light-color 50%, $red-color 10%) no-repeat;
 
   &__container {
     display: flex;
     align-items: center;
-    background: linear-gradient(-270deg, white 90%, #e94e38 10%) no-repeat;
+    background: linear-gradient(-270deg, $light-color 90%, $red-color 10%) no-repeat;
     height: 75px;
   }
 
@@ -26,7 +26,7 @@
     position: relative;
     width: 75px;
     height: 100%;
-    border-right: 1px solid white;
+    border-right: 1px solid $light-color;
   }
 
   &__burger {
@@ -35,6 +35,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    cursor: pointer;
 
     &.active span {
       transform: scale(0);
@@ -120,7 +121,7 @@
   &__search {
     flex: 0 0 75px;
     font-size: 24px;
-    color: white;
+    color: $light-color;
     height: 100%;
     line-height: 75px;
     text-align: center;
@@ -132,7 +133,7 @@
       transition: background-color .3s;
     }
 
-    @include mobileS {
+    @include mobileL {
       @media (max-width: #{$tablet-max-width}) {
         display: none;
       }
@@ -148,8 +149,8 @@
     background: $red-color;
     text-transform: uppercase;
     text-decoration: none;
-    color: white;
-    white-space: nowrap;
+    color: $light-color;
+    $light-color-space: nowrap;
 
     &>.fas {
       margin-right: 10px;

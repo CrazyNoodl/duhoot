@@ -21,15 +21,12 @@ let select = function () {
       currentText = select.querySelector('.select__current');
     currentText.innerText = text;
     select.classList.remove('is-active');
-
   }
-
 };
-
 select();
 
-$(document).ready(function() {
-  $('.header__burger').click(function(event) {
+$(document).ready(function () {
+  $('.header__burger').click(function (event) {
     $('.header__burger, .header__nav').toggleClass('active');
   });
 });

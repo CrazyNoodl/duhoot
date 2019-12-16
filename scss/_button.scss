@@ -1,0 +1,16 @@
+.button {
+  padding: 20px 30px;
+  background-color: $red-color;
+  font-size: 18px;
+  border-radius: 50px;
+  border: none;
+  border-bottom: 2px solid #c1412e;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: $light-color;
+
+  &:hover {
+    background: darken($red-color, 10);
+    transition: background-color .3s;
+  }
+}

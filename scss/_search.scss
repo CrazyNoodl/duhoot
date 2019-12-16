@@ -1,6 +1,6 @@
 .search {
   padding: 10px 0;
-  background: white;
+  background: $light-color;
   border-bottom: 1px solid #e2dee0;
 
   &__links {
@@ -48,12 +48,15 @@
     font-size: 12px;
     text-decoration: none;
 
-
     &_first {
       color: $red-color;
 
       &:hover {
-        background-color: darken(white, 7);
+        background-color: darken($light-color, 7);
+      }
+
+      & i {
+        color: $grey-color;
       }
     }
 
@@ -64,7 +67,7 @@
       padding: 0 15px;
 
       &>span {
-        color: white;
+        color: $light-color;
         display: block;
         line-height: 36px;
       }
@@ -72,12 +75,14 @@
       &:hover {
         background-color: darken($green-color, 7);
       }
+
+      & i {
+        color: $light-color;
+      }
     }
   }
 
   &__filter &__home {
-    background: $green-color;
-
     &:hover {
       background: darken($green-color, 5);
       transition: .3s;
@@ -85,8 +90,6 @@
   }
 
   &__filter &__music {
-    background: $orange-color;
-
     &:hover {
       background: darken($orange-color, 5);
       transition: .3s;
@@ -94,8 +97,6 @@
   }
 
   &__filter &__bus {
-    background: $purple-color;
-
     &:hover {
       background: darken($purple-color, 5);
       transition: .3s;

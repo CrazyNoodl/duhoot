@@ -25,25 +25,24 @@
     font-size: 18px;
     line-height: 32px;
     padding: 8px 0;
-    color: white;
+    color: $light-color;
     
     &--search {
       color: $red-color;
       font-size: 14px;
       padding: 0 16px 0 0 ;
-      white-space: nowrap;
+      $light-color-space: nowrap;
     }
-
   }
 
   &__icon {
     align-items: center;
     display: flex;
     margin-left: auto;
-    color: white
+    color: $light-color;
 
     &--search {
-      color: $red-color
+      color: $red-color;
     }
   }
 
@@ -70,7 +69,7 @@
     font-size: 16px;
     line-height: 24px;
     padding: 8px;
-    color: white;
+    color: $light-color;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 
     &:last-child {
@@ -106,6 +105,6 @@
 
 
   &--search {
-    background-color: white;
+    background-color: $light-color;
   }
 }

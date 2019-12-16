@@ -122,6 +122,12 @@
     flex-grow: 1;
     font-size: 30px;
 
+    @include mobileS {
+      @media (max-width: #{$tablet-max-width}) {
+        font-size: 15px;
+      }
+    }
+
   }
 
 }

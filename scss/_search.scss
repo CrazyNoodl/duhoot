@@ -48,15 +48,30 @@
     font-size: 12px;
     text-decoration: none;
 
+
     &_first {
       color: $red-color;
+
+      &:hover {
+        background-color: darken(white, 7);
+      }
     }
 
     &_second {
-      color: white;
+      text-transform: uppercase;
       background-color: $green-color;
       border: none;
-      line-height: 2;
+      padding: 0 15px;
+
+      &>span {
+        color: white;
+        display: block;
+        line-height: 36px;
+      }
+
+      &:hover {
+        background-color: darken($green-color, 7);
+      }
     }
   }
 
